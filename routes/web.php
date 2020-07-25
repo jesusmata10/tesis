@@ -26,5 +26,6 @@ Route::get('/validarcedula', 'ValidarCedulaController@index')->name('validarcedu
 Route::post('validarcedula', 'ValidarCedulaController@store');
 
 Route::resource('persona', 'PersonaController');
+Route::resource('users', 'UserController');
 
 Route::get('listaUsers', 'ListaUsersController@index')->name('listaUsers');

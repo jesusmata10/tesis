@@ -2,28 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\RegistroUser;
-//use App\User;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
 
-class ListaUsersController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        
-        $datos = RegistroUser::orderBy('id', 'Asc')->paginate(5);
-        
-//        dd( $datos->all());
-
-        return view('listaUsers', compact('datos'));
-        
-//        return view('listaUsers');
+        return User::index();
     }
 
     /**
@@ -42,7 +33,7 @@ class ListaUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(personaRequest $request)
     {
         //
     }
@@ -50,33 +41,33 @@ class ListaUsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Persona $persona)
     {
-        //
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Persona $persona)
     {
-       
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Persona $persona)
     {
         //
     }
@@ -84,10 +75,10 @@ class ListaUsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Persona $persona)
     {
         //
     }

@@ -1,49 +1,53 @@
 @extends('layouts.lte3')
 
 @section('content')
-
-   
 <div class="container-fluid">
     <div class="row">
-          <!-- left column -->
+        <!-- left column -->
         <div class="col-md-6">
-        <!-- general form elements -->
+            <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Inicio</h3>
-              </div>
-              <!-- /.card-header -->
-                <div class="card-body">
-                  <p class="text-primary" >se encuentra en inicio</p>
-                  <button type="button" class="btn btn-default toastsDefaultAutohide">
-                  Launch Default Toasts with autohide
-                </button>
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Inicio
+                    </h3>
                 </div>
-               
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="text-primary">
+                        se encuentra en inicio
+                    </p>
+                    <button class="btn btn-default toastsDefaultAutohide" type="button">
+                        Launch Default Toasts with autohide
+                    </button>
+                </div>
             </div>
-        <!-- /.card -->
+            <!-- /.card -->
         </div>
         <div class="col-md-6">
-        <!-- general form elements -->
+            <!-- general form elements -->
             <div class="card card-dark">
-              <div class="card-header">
-                <h3 class="card-title">Inicio</h3>
-              </div>
-              <!-- /.card-header -->
-                <div class="card-body">
-                  <p class="text-primary" >se encuentra en inicio</p>
-                  <button type="button" class="btn btn-default toastsDefaultAutohide" id="alerta">
-                  Verificación
-                </button>
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Inicio
+                    </h3>
                 </div>
-               
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="text-primary">
+                        se encuentra en inicio
+                    </p>
+                    <button class="btn btn-default toastsDefaultAutohide" id="alerta" type="button">
+                        Verificación
+                    </button>
+                </div>
             </div>
-        <!-- /.card -->
+            <!-- /.card -->
         </div>
     </div>
 </div>
 <script type="text/javascript">
-  $(function() {
+    $(function() {
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -94,8 +98,7 @@
     $('.toastrDefaultWarning').click(function() {
       toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
     });
-
-      
+     
       
       $('.toastsDefaultBottomRight').click(function('#alerta') {
       $(document).Toasts('create', {
@@ -103,11 +106,7 @@
         position: 'bottomRight',
         body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
       })
-      
-          
-          
-          
-      
+    
     $('.toastsDefaultDefault').click(function() {
       $(document).Toasts('create', {
         title: 'Toast Title',
@@ -208,10 +207,5 @@
       })
     });
   });
-
 </script>
-    
-
-    
-
 @endsection

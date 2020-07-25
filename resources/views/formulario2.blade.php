@@ -10,19 +10,9 @@
               <div class="card-header">
                 <h3 class="card-title">Registro de Usuarios</h3>
               </div>
-               {{--  @if($errors->any())
-                    <div class="alert alert-danger alert-dismissible">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>
-                                {{ $error }}
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif--}}
+               
                 
-				@if(session('mensaje'))
+				        @if(session('mensaje'))
                     <div class="alert alert-info alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                          	<p><i class="icon fa fa-info"></i>
@@ -31,7 +21,7 @@
                     </div>
                 @endif
                 
-              <form role="form"action="{{ url('formulario2') }}" method="POST">
+              <form role="form" action="{{ url('formulario2') }}" method="POST">
               	@csrf
                 <div class="card-body">
                 	<div class="row">
@@ -43,7 +33,7 @@
                   			        <strong>
                   			            {{ $message }}
                   			        </strong>    
-                                </span>
+                            </span>
                   			@enderror
                   		</div>
                   		<div class="form-group col-md-6">
@@ -52,7 +42,7 @@
                     		@error('apellidos')
                     		    <span class="invalid-feedback" role="alert">
                     		        <strong>
-                    		            {{ $message}}
+                    		            {{ $message }}
                     		        </strong>
                     		    </span>
                     		@enderror
